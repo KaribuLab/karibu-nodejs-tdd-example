@@ -5,7 +5,7 @@
   "main": "dist/index.js",
   "scripts": {
     "test": "jest --verbose --runInBand",
-    "build": "cross-env rimraf dist/* && tsc --project tsconfig.build.json",
+    "build": "cross-env npm run test && rimraf dist/* && tsc --project tsconfig.build.json",
     "lint": "ts-standard",
     "play" :"cross-env npm run build && node dist/index.js"
   },

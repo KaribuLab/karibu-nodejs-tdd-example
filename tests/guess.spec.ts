@@ -27,16 +27,22 @@ describe('Guess package class', () => {
   test(`Get ${rangeSize} options`, () => {
     const guessNumber: GuessNumber = new GuessNumber(playerName, new RandomNumberGenerator(rangeTen))
     expect(guessNumber.options.length).toBe(rangeSize)
-    expect(mockGenerate).toHaveBeenCalled()
+    expect(mockGenerate).toHaveBeenCalledTimes(1)
   })
   test(`${wrongAnswer} it's wrong, expected ${secretNumber}`, () => {
     const guessNumber: GuessNumber = new GuessNumber(playerName, new RandomNumberGenerator(rangeTen))
     expect(guessNumber.isNumber(wrongAnswer)).toBeFalsy()
-    expect(mockGenerate).toHaveBeenCalled()
   })
   test(`Secret number ${secretNumber} guessed!`, () => {
     const guessNumber: GuessNumber = new GuessNumber(playerName, new RandomNumberGenerator(rangeTen))
     expect(guessNumber.isNumber(secretNumber)).toBeTruthy()
-    expect(mockGenerate).toHaveBeenCalled()
+  })
+  test('isNumber generate must be called', () => {
+    const spy = jest.spyOn(rangeTen, 'toArrayNumber')
+    /* eslint-disable */
+    const guessNumber = new GuessNumber(playerName, new RandomNumberGenerator(rangeTen))
+    /* eslint-disable */
+    expect(spy).toHaveBeenCalled()
+    spy.mockRestore()
   })
 })
