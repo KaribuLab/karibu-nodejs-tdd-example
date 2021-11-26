@@ -1,0 +1,41 @@
+{
+  "name": "karibu-nodejs-tdd-example",
+  "version": "1.0.0",
+  "description": "TDD example with Node.js",
+  "main": "dist/index.js",
+  "scripts": {
+    "test": "jest --verbose --runInBand",
+    "build": "cross-env rimraf dist/* && tsc --project tsconfig.build.json",
+    "lint": "ts-standard",
+    "play" :"cross-env npm run build && node dist/index.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/KaribuLab/karibu-nodejs-tdd-example.git"
+  },
+  "keywords": [
+    "jest",
+    "node",
+    "tdd",
+    "karibu"
+  ],
+  "author": "Patricio Ascencio <patricio.ascencio@karibu.cl>",
+  "license": "Apache-2.0",
+  "bugs": {
+    "url": "https://github.com/KaribuLab/karibu-nodejs-tdd-example/issues"
+  },
+  "homepage": "https://github.com/KaribuLab/karibu-nodejs-tdd-example#readme",
+  "devDependencies": {
+    "@types/inquirer": "^8.1.3",
+    "@types/jest": "^27.0.3",
+    "cross-env": "^7.0.3",
+    "jest": "^27.3.1",
+    "rimraf": "^3.0.2",
+    "ts-jest": "^27.0.7",
+    "ts-standard": "^11.0.0",
+    "typescript": "<4.5.0"
+  },
+  "dependencies": {
+    "inquirer": "^8.2.0"
+  }
+}
