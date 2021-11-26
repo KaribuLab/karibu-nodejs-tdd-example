@@ -9,6 +9,11 @@ Para esto se creo este viejo y conocido juego de adivinar el número a modo de i
 3. Buenas Prácticas
 4. Mocks y Spies con Jest
 
+- [Karibu Node.js TDD Example](#karibu-nodejs-tdd-example)
+  - [El juego funcionando](#el-juego-funcionando)
+  - [¿Cómo partimos?](#cómo-partimos)
+  - [Referencias](#referencias)
+
 ## El juego funcionando
 
 ![](docs/guess-number-play.gif)
@@ -58,4 +63,5 @@ Este script ejecuta 2 scripts más:
 - [Función mockImplementation del objeto Mocks](https://jestjs.io/docs/mock-function-api#mockfnmockimplementationfn)
 - [Función mock del objeto Jest](https://jestjs.io/docs/jest-object#jestmockmodulename-factory-options)
 - [Función fn del objeto Jest](https://jestjs.io/docs/jest-object#jestfnimplementation)
+- [Función spyOn del objeto Jest](https://jestjs.io/docs/jest-object#jestspyonobject-methodname)
 - [Ejecución de pruebas lenta](https://jestjs.io/docs/troubleshooting#tests-are-extremely-slow-on-docker-andor-continuous-integration-ci-server)
